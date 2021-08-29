@@ -3,15 +3,15 @@
 // App root
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL root
-define('URLROOT', 'http://localhost/traversymvc');
+define('URLROOT', '_YOUR_URL_');
 // Site name
-define('SITENAME', 'TraversyMVC');
+define('SITENAME', '_YOUR_SITENAME_');
 // App version
 define('APPVERSION', '1.0.0');
 
 
 // DB Params
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '123456');
-define('DB_NAME', 'tmvc');
+define('DB_USER', '_YOUR_USER_');
+define('DB_PASS', '_YOUR_PASS_');
+define('DB_NAME', '_YOUR_DB_NAME_');
