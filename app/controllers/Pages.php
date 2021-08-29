@@ -5,7 +5,11 @@ class Pages extends Controller {
         $this->postModel = $this->model('Post');
     }
     public function index() {
-        $data = ['title' => 'Welcome'];
+        $posts = $this->postModel->getPosts();
+        $data = ['title' => 'Welcome', 'posts' => $posts];
+
+        $posts = $this->postModel->getPosts();
+
         $this->view('pages/index', $data);
     }
     public function about() {
