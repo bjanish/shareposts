@@ -1,12 +1,15 @@
 <?php
 
-class Pages {
+class Pages extends Controller {
     public function __construct() {
+        $this->postModel = $this->model('Post');
     }
     public function index() {
-        echo 'This is the home page';
+        $data = ['title' => 'Welcome'];
+        $this->view('pages/index', $data);
     }
-    public function about($id) {
-        echo $id;
+    public function about() {
+        $data = ['title' => 'About'];
+        $this->view('pages/about', $data);
     }
 }

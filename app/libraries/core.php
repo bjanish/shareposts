@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * Core class
  *  
  * Creates URL and loads core controller
@@ -36,13 +36,13 @@ class Core {
             // Unset 1 index
             unset($url[1]);
         }
+
         // Get params
         $this->params = $url ? array_values($url) : [];
 
         // Call a callback with array of params
-        if ($this->params) {
-            call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
-        }
+
+        call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
     }
     public function getUrl() {
         if (isset($_GET['url'])) {
